@@ -1,0 +1,20 @@
+GET query:
+http://localhost:8080/message
+or
+http://localhost:8080/message/1
+
+POST query:
+{
+    "title": "Create new user",
+    "description": "test description",
+    "done": true
+}
+
+PUT query:
+http://localhost:8080/message/2
+{
+    "text": "hello mentor's"
+}
+
+DELETE query:
+http://localhost:8080/message/4
