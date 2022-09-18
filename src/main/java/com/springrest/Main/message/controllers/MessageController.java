@@ -1,6 +1,6 @@
-package com.springrest.Main.controllers;
+package com.springrest.Main.message.controllers;
 
-import com.springrest.Main.exceptions.NotFoundException;
+import com.springrest.Main.message.exceptions.NotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -13,9 +13,9 @@ import java.util.Map;
 public class MessageController {
     private int counter = 4;
     private List<Map<String, String>> messages = new ArrayList<>() {{
-        add(new HashMap<String, String>() {{ put("id", "1"); put("text", "first message"); }});
-        add(new HashMap<String, String>() {{ put("id", "2"); put("text", "second message"); }});
-        add(new HashMap<String, String>() {{ put("id", "3"); put("text", "third message"); }});
+        add(new HashMap<String, String>() {{ put("id", "1"); put("text", "Beknazar"); put("age", "18"); }});
+        add(new HashMap<String, String>() {{ put("id", "2"); put("text", "Kubatbek"); put("age", "30"); }});
+        add(new HashMap<String, String>() {{ put("id", "3"); put("text", "Bermet"); put("age", "13"); }});
     }};
 
     @GetMapping
