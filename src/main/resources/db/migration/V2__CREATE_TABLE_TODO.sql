@@ -1,0 +1,6 @@
+CREATE TABLE [IF NOT EXISTS] todo (
+    id BIGINT NOT NULL, AUTO_INCREMENT,
+    title VARCHAR(64) NOT NULL,
+    completed BOOLEAN NOT NULL,
+    PRIMARY KEY(id)
+) engine=MyISAM;

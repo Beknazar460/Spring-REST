@@ -11,10 +11,3 @@ CREATE TABLE user (
     userPass VARCHAR(64) NOT NULL,
     PRIMARY KEY(id)
 ) engine=MyISAM;
-
-CREATE TABLE todo (
-    id BIGINT NOT NULL, AUTO_INCREMENT,
-    title VARCHAR(64) NOT NULL,
-    completed BOOLEAN NOT NULL,
-    PRIMARY KEY(id)
-) engine=MyISAM;
