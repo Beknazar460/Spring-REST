@@ -6,17 +6,13 @@ import com.springrest.Main.exception.UserNotFoundException;
 import com.springrest.Main.model.UserModel;
 import com.springrest.Main.repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 @Service
 public class UserService {
 
     @Autowired
     private UserRepo userRepo;
-
 
     public UserEntity createUser(UserEntity user) throws UserAlreadyExistException {
         if (userRepo.findByUserName(user.getUserName()) != null) {

@@ -1,6 +1,7 @@
 package com.springrest.Main.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "user")
@@ -12,7 +13,18 @@ public class UserEntity {
     private String userName;
     private String userPass;
 
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    private List<ToDoEntity> todo;
+
     public UserEntity() {
+    }
+
+    public List<ToDoEntity> getTodo() {
+        return todo;
+    }
+
+    public void setTodo(List<ToDoEntity> todo) {
+        this.todo = todo;
     }
 
     public Long getId() {
